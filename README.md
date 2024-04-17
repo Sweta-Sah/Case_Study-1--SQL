@@ -1,43 +1,43 @@
 # Danny's Dinner
 
-Situation:
+Situation:  
 Danny's Diner, specializing in sushi, curry, and ramen, seeks assistance in leveraging basic customer data to enhance business operations. Danny aims to understand customer visiting patterns, expenditure, and favorite menu items to personalize the dining experience. Insights will guide decisions on expanding the loyalty program.
 
-TASK:
+TASK:  
 Danny has shared three crucial datasets for our case study: sales, menu, and members. Due to privacy concerns, he provided samples of overall customer data. We aim to craft fully functioning SQL queries using these examples to address Danny's questions and improve his restaurant's operations.
 
-ACTION:
+ACTION:  
 
-<img width="449" alt="image" src="https://github.com/Sweta-Sah/Case_Study-1--SQL/assets/132820867/f0a34e75-f759-47c5-a3d8-c5681d7c481e">
+<img width="449" alt="image" src="https://github.com/Sweta-Sah/Case_Study-1--SQL/assets/132820867/f0a34e75-f759-47c5-a3d8-c5681d7c481e">  
 
-CREATE SCHEMA dannys_diner;
-SET search_path = dannys_diner;
+CREATE SCHEMA dannys_diner;  
+SET search_path = dannys_diner;  
 
-CREATE TABLE sales (
-  "customer_id" VARCHAR(1),
-  "order_date" DATE,
-  "product_id" INTEGER
-);
+CREATE TABLE sales (  
+  "customer_id" VARCHAR(1),  
+  "order_date" DATE,  
+  "product_id" INTEGER  
+);  
 
-INSERT INTO sales
-  ("customer_id", "order_date", "product_id")
-VALUES
-  ('A', '2021-01-01', '1'),
-  ('A', '2021-01-01', '2'),
-  ('A', '2021-01-07', '2'),
-  ('A', '2021-01-10', '3'),
-  ('A', '2021-01-11', '3'),
-  ('A', '2021-01-11', '3'),
-  ('B', '2021-01-01', '2'),
-  ('B', '2021-01-02', '2'),
-  ('B', '2021-01-04', '1'),
-  ('B', '2021-01-11', '1'),
-  ('B', '2021-01-16', '3'),
-  ('B', '2021-02-01', '3'),
-  ('C', '2021-01-01', '3'),
-  ('C', '2021-01-01', '3'),
-  ('C', '2021-01-07', '3');
- 
+INSERT INTO sales  
+  ("customer_id", "order_date", "product_id")  
+VALUES  
+  ('A', '2021-01-01', '1'),  
+  ('A', '2021-01-01', '2'),  
+  ('A', '2021-01-07', '2'),  
+  ('A', '2021-01-10', '3'),  
+  ('A', '2021-01-11', '3'),  
+  ('A', '2021-01-11', '3'),  
+  ('B', '2021-01-01', '2'),  
+  ('B', '2021-01-02', '2'),  
+  ('B', '2021-01-04', '1'),  
+  ('B', '2021-01-11', '1'),  
+  ('B', '2021-01-16', '3'),  
+  ('B', '2021-02-01', '3'),  
+  ('C', '2021-01-01', '3'),  
+  ('C', '2021-01-01', '3'),  
+  ('C', '2021-01-07', '3');  
+   
 
 CREATE TABLE menu (
   "product_id" INTEGER,

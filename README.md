@@ -7,6 +7,7 @@ TASK:
 Danny has shared three crucial datasets for our case study: sales, menu, and members. Due to privacy concerns, he provided samples of overall customer data. We aim to craft fully functioning SQL queries using these examples to address Danny's questions and improve his restaurant's operations.
 
 ACTION:
+
 <img width="449" alt="image" src="https://github.com/Sweta-Sah/Case_Study-1--SQL/assets/132820867/f0a34e75-f759-47c5-a3d8-c5681d7c481e">
 
 CREATE SCHEMA dannys_diner;
@@ -70,6 +71,8 @@ FROM sales s
 JOIN menu m
 ON s.product_id=m.product_id
 GROUP BY s.customer_id;
+
+<img width="138" alt="image" src="https://github.com/Sweta-Sah/Case_Study-1--SQL/assets/132820867/1b836d61-30d0-4566-8c70-3ff72c6c2f2e">
 
 -- How many days has each customer visited the restaurant?
 SELECT customer_id, COUNT(DISTINCT order_date) AS no_of_visit

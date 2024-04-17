@@ -75,11 +75,13 @@ GROUP BY s.customer_id;
 <img width="138" alt="image" src="https://github.com/Sweta-Sah/Case_Study-1--SQL/assets/132820867/1b836d61-30d0-4566-8c70-3ff72c6c2f2e">
 
 -- How many days has each customer visited the restaurant?
+
 SELECT customer_id, COUNT(DISTINCT order_date) AS no_of_visit
 FROM sales
 GROUP BY customer_id;
 
 -- What was the first item from the menu purchased by each customer?
+
 WITH cte AS (SELECT s.customer_id, s.order_date, m.product_name,
 dense_rank() OVER(PARTITION BY customer_id ORDER BY order_date) AS r
 FROM sales s
